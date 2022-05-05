@@ -6,6 +6,7 @@ import BranchTerminalRegistration from "../pages/BranchTerminalRegistration";
 import FieldIdentificationConfig from "../pages/FieldIdentificationConfig";
 import ManualKycRegistration from "../pages/ManualKycRegistration";
 import OnlineCbrEntry from "../pages/OnlineCbrEntry";
+import TicketCentre from "../pages/TicketCentre";
 
 const router = () => {
   return (

@@ -1,20 +1,8 @@
-import React from "react";
-// CSS
-import "../components/common/common.css";
-import "../components/common/main.css";
-
-// Components
-import Header from "../components/common/Header";
-import AgentRegistrationMain from "../components/agentRegistration/AgentRegistrationMain";
-import Footer from "../components/common/Footer";
+import React from 'react'
 
 const AgentRegistration = () => {
   return (
-    <div>
-            <Header />
-      <ManualKycMain />
-      <Footer />
-    </div>
+    <div>AgentRegistration</div>
   )
 }
 

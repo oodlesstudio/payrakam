@@ -26,10 +26,9 @@ const options2 = [
   { value: "option", label: "option" },
 ];
 
-const ManualKycWindow = () => {
+const TicketWindow = () => {
   const [resetFilters, setResetFilters] = useState(false);
   const [saveFilters, setSaveFilters] = useState(false);
-  
 
   const [showFilters, setShowFilters] = useState(false);
 
@@ -155,8 +154,8 @@ const ManualKycWindow = () => {
 
   const [extrafield, setExtraField] = useState(false);
 
-  function displayExtraFields() {
-    setExtraField(!extrafield);
+  function displayExtraFields(){
+setExtraField(!extrafield);
   }
 
   // flow bar
@@ -273,7 +272,7 @@ const ManualKycWindow = () => {
       <div className="d-flex align-items-center justify-content-center w-100">
         <div className="form-Steps" >
           {/* Step 1 */}
-          <div className="form-step active position-relative" >
+          <div className="form-step position-relative" >
             <div className="formbar-type formbar">
               <svg className="flowcircleSvg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" width="12" height="12" rx="6" fill="#003087" />
@@ -320,9 +319,8 @@ const ManualKycWindow = () => {
       <div className="tableBorderBox">
         <div className={flow === 1 ? "formflow-1 formflow" : "d-none"}
         >
-          <div className="configSelectBoxTop configSelectBoxTop2 row">
-            {/* CLient Name */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="clientName">Client <span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -341,8 +339,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Franchise */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="franchise">Franchise <span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -361,8 +358,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Services Offer */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="serviceOffer">Services Offer<span> *</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -381,11 +377,9 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            <div className="clientNameSelect d-sm-none col-lg-3" >
-              {/* Empty Field  */}
-            </div>
-            {/* First Name */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+          </div>
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="firstName">First Name <span> *</span> </label>
               <input
                 type="text"
@@ -395,8 +389,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Middle Name*/}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="middleName">Middle Name</label>
               <input
                 type="text"
@@ -406,8 +399,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Last Name*/}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Last Name <span> *</span> </label>
               <input
                 type="text"
@@ -417,8 +409,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Date of Birth*/}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="dob">Date of Birth<span> *</span> </label>
               <input
                 type="text"
@@ -428,8 +419,11 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Gender */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+          </div>
+
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="gender">Gender <span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -448,8 +442,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Father Name  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="fatherName">Father Name <span> *</span></label>
               <input
                 type="text"
@@ -459,8 +452,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Spouse Name  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Spouse Name<span> *</span> </label>
               <input
                 type="text"
@@ -470,8 +462,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Category  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="category">Category<span> *</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -490,8 +481,11 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Physically  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+          </div>
+
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="physically">Physically<span> *</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -510,8 +504,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Highest Education Qualification  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="qualification">Highest Education Qualification<span> *</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -530,8 +523,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Course  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="qualification">Course<span> *</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -550,8 +542,8 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Institute Name */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Institute Name  <span> *</span> </label>
               <input
                 type="text"
@@ -561,8 +553,11 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Date of Passing */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+          </div>
+
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Date of Passing <span> *</span> </label>
               <input
                 type="text"
@@ -572,8 +567,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Alternate Occupation Type */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="occupation">Alternate Occupation Type<span> *</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -592,8 +586,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Alternate Occupation Description */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Alternate Occupation Description <span> *</span> </label>
               <input
                 type="text"
@@ -603,13 +596,14 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
+
+
           </div>
         </div>
         <div
           className={flow === 2 ? "formflow-2 formflow" : "d-none"}>
-          <div className="configSelectBoxTop configSelectBoxTop2 row">
-            {/* Company Name */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Company Name<span> *</span> </label>
               <input
                 type="text"
@@ -619,8 +613,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Personale Email ID */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Personale Email ID<span> *</span> </label>
               <input
                 type="text"
@@ -630,8 +623,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* ID Card Type */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="idCardType">ID Card Type<span> *</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -650,8 +642,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* PAN No. */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="panNumber">PAN No.<span> *</span> </label>
               <input
                 type="text"
@@ -661,8 +652,9 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Adhar Card No. */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+          </div>
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Adhar Card No.<span> *</span> </label>
               <input
                 type="text"
@@ -672,8 +664,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Check if GST Registered */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <div
                 className="d-flex align-items-end h-100"
               >
@@ -693,8 +684,7 @@ const ManualKycWindow = () => {
                 </div>
               </div>
             </div>
-            {/* GST No */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">GST No </label>
               <input
                 type="text"
@@ -704,12 +694,9 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Empty Field */}
-            <div className="clientNameSelect col-sm-4 col-lg-3" >
-              {/* Empty Field */}
-            </div>
-            {/* Entity Type */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+          </div>
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="idCardType">Entity Type</label>
               <Select
                 defaultValue={selectedOption}
@@ -728,8 +715,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Shop Opens At*/}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="showOpenType">Shop Opens At</label>
               <Select
                 defaultValue={selectedOption}
@@ -748,8 +734,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Shop Closes At*/}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="showCloseType">Shop Closes At</label>
               <Select
                 defaultValue={selectedOption}
@@ -768,12 +753,13 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Week Off */}
-
-            <div className="clientNameSelect col-12">
+          </div>
+          {/* Week Off */}
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="idCardType">Weekly Off</label>
-              <div className="row row-cols-auto row-week">
-                <div className=" mt-2 col">
+              <div className="d-flex align-items-center">
+                <div className="me-4">
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -793,7 +779,7 @@ const ManualKycWindow = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 col" >
+                <div className="me-4" >
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -813,7 +799,7 @@ const ManualKycWindow = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 col" >
+                <div className="me-4" >
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -833,7 +819,7 @@ const ManualKycWindow = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 col" >
+                <div className="me-4" >
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -853,7 +839,7 @@ const ManualKycWindow = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 col" >
+                <div className="me-4" >
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -873,7 +859,7 @@ const ManualKycWindow = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 col" >
+                <div className="me-4" >
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -893,7 +879,7 @@ const ManualKycWindow = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 col" >
+                <div className="me-4" >
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -913,7 +899,7 @@ const ManualKycWindow = () => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 col" >
+                <div className="me-4" >
                   <div
                     className="d-flex align-items-end h-100"
                   >
@@ -936,9 +922,10 @@ const ManualKycWindow = () => {
 
               </div>
             </div>
-
-            {/* Device Name  */}
-            <div className="clientNameSelect col-lg col-sm-3">
+          </div>
+          {/*  */}
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col">
               <label htmlFor="deviceName">Device Name</label>
               <Select
                 defaultValue={selectedOption}
@@ -957,8 +944,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Connectivity Type */}
-            <div className="clientNameSelect col-lg col-sm-3">
+            <div className="clientNameSelect col">
               <label htmlFor="connectivityType">Connectivity Type</label>
               <Select
                 defaultValue={selectedOption}
@@ -977,8 +963,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Bank Reference Number*/}
-            <div className="clientNameSelect col-lg col-sm-3">
+            <div className="clientNameSelect col">
               <label htmlFor="lastName">Bank Reference Number</label>
               <input
                 type="text"
@@ -988,8 +973,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Corporate/ Individual BC*/}
-            <div className="clientNameSelect col-lg col-sm-3">
+            <div className="clientNameSelect col">
               <label htmlFor="corporateType">Corporate/ Individual BC</label>
               <Select
                 defaultValue={selectedOption}
@@ -1008,8 +992,7 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Provider*/}
-            <div className="clientNameSelect col-lg col-sm-3">
+            <div className="clientNameSelect col">
               <label htmlFor="lastName">Provider</label>
               <input
                 type="text"
@@ -1019,80 +1002,69 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            <div>
-              <div className="row">
-                {/* Device Name */}
-                <div className="clientNameSelect col-lg col-sm-3">
-                  <label htmlFor="deviceType">Device Name</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setDeviceType();
-                      changeDeviceType();
-                    }}
-                    options={options2}
-                    id="deviceName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="Select"
-                  />
-                  {deviceType && (
-                    <p className="text-danger font-size9">
-                      Enter a correct input
-                    </p>
-                  )}
-                </div>
-                {/* Device ID */}
-                <div className="clientNameSelect col-lg col-sm-3">
-                  <label htmlFor="DeviceID">Device ID</label>
-                  <input
-                    type="text"
-                    name="DeviceID"
-                    id="DeviceID"
-                    placeholder="Enter Device ID"
-                    className="inputTextBox"
-                  />
-                </div>
-                {/* Device IMEI No */}
-                <div className="clientNameSelect col-lg col-sm-3">
-                  <label htmlFor="DeviceID">Device IMEI No<span> *</span> </label>
-                  <input
-                    type="text"
-                    name="DeviceImeiNo"
-                    id="DeviceImeiNo"
-                    placeholder="Enter Device IMEI No"
-                    className="inputTextBox"
-                  />
-                </div>
-                {/* Indusken ID */}
-                <div className="clientNameSelect col-lg col-sm-3">
-                  <label htmlFor="Indusken">Indusken ID</label>
-                  <input
-                    type="text"
-                    name="InduskenNo"
-                    id="InduskenNo"
-                    placeholder="Enter Indusken ID"
-                    className="inputTextBox"
-                  />
-                </div>
-                {/* Empty Field */}
-                <div className="clientNameSelect col-lg d-sm-none d-md-block">
-                  {/*  */}
-                </div>
-
-              </div>
-
+          </div>
+          {/*  */}
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col">
+              <label htmlFor="deviceType">Device Name</label>
+              <Select
+                defaultValue={selectedOption}
+                onChange={() => {
+                  setDeviceType();
+                  changeDeviceType();
+                }}
+                options={options2}
+                id="deviceName"
+                classNamePrefix="reactSelectBox"
+                placeholder="Select"
+              />
+              {deviceType && (
+                <p className="text-danger font-size9">
+                  Enter a correct input
+                </p>
+              )}
             </div>
-            {/*  */}
+            <div className="clientNameSelect col">
+              <label htmlFor="DeviceID">Device ID</label>
+              <input
+                type="text"
+                name="DeviceID"
+                id="DeviceID"
+                placeholder="Enter Device ID"
+                className="inputTextBox"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              <label htmlFor="DeviceID">Device IMEI No<span> *</span> </label>
+              <input
+                type="text"
+                name="DeviceImeiNo"
+                id="DeviceImeiNo"
+                placeholder="Enter Device IMEI No"
+                className="inputTextBox"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              <label htmlFor="Indusken">Indusken ID</label>
+              <input
+                type="text"
+                name="InduskenNo"
+                id="InduskenNo"
+                placeholder="Enter Indusken ID"
+                className="inputTextBox"
+              />
+            </div>
+            <div className="clientNameSelect col">
+              {/*  */}
+            </div>
           </div>
         </div>
-        {/* flow-3 */}
         <div
           className={flow === 3 ? "formflow-3 formflow" : "d-none"}
         >
 
-          <div className="configSelectBoxTop configSelectBoxTop2 row">
-            {/* Account Number */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+          <div className="configSelectBoxTop row">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Account Number<span> *</span></label>
               <input
                 type="text"
@@ -1102,8 +1074,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* IFSC Code */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">IFSC Code<span> *</span></label>
               <input
                 type="text"
@@ -1113,8 +1084,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* No. of Transactions Per Day */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">No. of Transactions Per Day<span> *</span></label>
               <input
                 type="text"
@@ -1124,8 +1094,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Transfer Amount Per day */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Transfer Amount Per day<span> *</span></label>
               <input
                 type="text"
@@ -1135,8 +1104,12 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Agent Wallet Transfer */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+          </div>
+
+          <div className="configSelectBoxTop row">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="agentWallet">Agent Wallet Transfer<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1155,8 +1128,8 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Agent Account Name */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="lastName">Agent Account Name<span> *</span></label>
               <input
                 type="text"
@@ -1166,8 +1139,8 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Is UPI Partner */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="upiPartner">Is UPI Partner<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1186,8 +1159,8 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Wallet Loading/Withdrawal */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="Wallet Loading">Wallet Loading/Withdrawal<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1206,14 +1179,11 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
+          </div>
 
-            {/* Empty Field */}
-            <div className="clientNameSelect col-sm-4 d-lg-none">
-              {/* not in use */}
-            </div>
+          <div className="configSelectBoxTop row">
 
-            {/* BC Agent Type */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="bcAgentType">BC Agent Type<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1232,8 +1202,8 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* parentFlag */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="parentFlag">parentFlag<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1253,8 +1223,8 @@ const ManualKycWindow = () => {
               )}
             </div>
 
-            {/* Parent Agent ID  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="ParentAgentID ">Parent Agent ID <span> *</span></label>
               <input
                 type="text"
@@ -1265,8 +1235,8 @@ const ManualKycWindow = () => {
               />
             </div>
 
-            {/* Registration Type  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="RegistrationType">Registration Type<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1286,8 +1256,11 @@ const ManualKycWindow = () => {
               )}
             </div>
 
-            {/* Type of Commission  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+          </div>
+          <div className="configSelectBoxTop row">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="commissionType">Type of Commission<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1306,8 +1279,8 @@ const ManualKycWindow = () => {
                 </p>
               )}
             </div>
-            {/* Threshold Amount  */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="ThresholdAmount ">Threshold Amount<span> *</span></label>
               <input
                 type="text"
@@ -1317,8 +1290,7 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
-            {/* Alert Configuration */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="alertConfiguration ">Alert Configuration<span> *</span></label>
               <div className="d-flex align-items-center">
                 <div className="me-3">
@@ -1363,8 +1335,7 @@ const ManualKycWindow = () => {
                 </div>
               </div>
             </div>
-            {/* Configuration Category */}
-            <div className="clientNameSelect col-sm-4 col-lg-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="alertConfiguration ">Configuration Category<span> *</span></label>
               <div className="d-flex align-items-center">
                 <div className="me-3">
@@ -1409,7 +1380,10 @@ const ManualKycWindow = () => {
                 </div>
               </div>
             </div>
+
+
           </div>
+
 
         </div>
 
@@ -1417,16 +1391,18 @@ const ManualKycWindow = () => {
           className={flow === 4 ? "formflow-4 formflow" : "d-none"}
         >
 
-          <div className="configSelectBoxTop configSelectBoxTop2 mb-0 row">
+          <div className="configSelectBoxTop row">
             {/* to add TextArea */}
-            <div className="clientNameSelect col-12 d-flex flex-column">
+            <div className="clientNameSelect col d-flex flex-column">
 
               <label htmlFor="Area">Registered Address<span> *</span></label>
               <textarea className="textAreaBox" placeholder="Enter Registered Address" id="RegisterAddress" rows={3}></textarea>
             </div>
+          </div>
 
+          <div className="configSelectBoxTop row">
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="Area">Area<span> *</span></label>
               <input
                 type="text"
@@ -1437,7 +1413,7 @@ const ManualKycWindow = () => {
               />
             </div>
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="Country">Country<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1457,7 +1433,7 @@ const ManualKycWindow = () => {
               )}
             </div>
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="State">State<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1477,7 +1453,7 @@ const ManualKycWindow = () => {
               )}
             </div>
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="State">District<span> *</span></label>
               <input
                 type="text"
@@ -1488,8 +1464,11 @@ const ManualKycWindow = () => {
               />
             </div>
 
+          </div>
 
-            <div className="clientNameSelect col-sm-3">
+          <div className="configSelectBoxTop row">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="CityName">City<span>*</span></label>
               <Select
                 defaultValue={selectedOption}
@@ -1509,7 +1488,7 @@ const ManualKycWindow = () => {
               )}
             </div>
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="Pincode">Pincode<span> *</span></label>
               <input
                 type="text"
@@ -1520,7 +1499,7 @@ const ManualKycWindow = () => {
               />
             </div>
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="businessEmailID">Business Email ID<span> *</span></label>
               <input
                 type="text"
@@ -1531,7 +1510,7 @@ const ManualKycWindow = () => {
               />
             </div>
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="contactNo">Contact No.<span> *</span></label>
               <input
                 type="text"
@@ -1542,8 +1521,11 @@ const ManualKycWindow = () => {
               />
             </div>
 
+          </div>
 
-            <div className="clientNameSelect col-sm-3">
+          <div className="configSelectBoxTop row mb-0">
+
+            <div className="clientNameSelect col-3">
               <label htmlFor="landlineNo">Landline No.<span> *</span></label>
               <input
                 type="text"
@@ -1554,7 +1536,7 @@ const ManualKycWindow = () => {
               />
             </div>
 
-            <div className="clientNameSelect col-sm-3">
+            <div className="clientNameSelect col-3">
               <label htmlFor="alternateNo">Alternate No.<span> *</span></label>
               <input
                 type="text"
@@ -1564,14 +1546,13 @@ const ManualKycWindow = () => {
                 className="inputTextBox"
               />
             </div>
+
           </div>
 
-          <div className="hrGreyLine extra-form-hr  my-4"></div>
+          <div className="hrGreyLine my-4"></div>
 
-
-
-          <div className="configSelectBoxTop configSelectBoxTop2 row mt-0 xtraFormBottomMargin">
-            <div className="clientNameSelect col-12 xtraFormBottomMargin">
+          <div className="configSelectBoxTop row mt-0">
+            <div className="clientNameSelect col">
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -1590,17 +1571,20 @@ const ManualKycWindow = () => {
             </div>
           </div>
 
-          <section className={extrafield ? "formExtraField active" : "formExtraField"}>
+          <section className={extrafield  ? "formExtraField active" : "formExtraField"}>
             {/* extra form 1 */}
-            <div className="configSelectBoxTop configSelectBoxTop2 row mb-0">
+            <div className="configSelectBoxTop row">
               {/* to add TextArea */}
-              <div className="clientNameSelect col-12 d-flex flex-column">
+              <div className="clientNameSelect col d-flex flex-column">
 
                 <label htmlFor="Area">Local Address<span> *</span></label>
                 <textarea className="textAreaBox" placeholder="Enter Local Address" id="RegisterAddress" rows={3}></textarea>
               </div>
+            </div>
 
-              <div className="clientNameSelect col-sm-3">
+            <div className="configSelectBoxTop row">
+
+              <div className="clientNameSelect col-3">
                 <label htmlFor="LocalArea">Local Area<span> *</span></label>
                 <input
                   type="text"
@@ -1611,7 +1595,7 @@ const ManualKycWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="LocalCountry">Local Country<span>*</span></label>
                 <Select
                   defaultValue={selectedOption}
@@ -1631,7 +1615,7 @@ const ManualKycWindow = () => {
                 )}
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="LocalState">Local State<span>*</span></label>
                 <Select
                   defaultValue={selectedOption}
@@ -1651,7 +1635,7 @@ const ManualKycWindow = () => {
                 )}
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="State">Local District<span> *</span></label>
                 <input
                   type="text"
@@ -1662,8 +1646,11 @@ const ManualKycWindow = () => {
                 />
               </div>
 
+            </div>
 
-              <div className="clientNameSelect col-sm-3">
+            <div className="configSelectBoxTop row">
+
+              <div className="clientNameSelect col-3">
                 <label htmlFor="LocalCityName">Local City<span>*</span></label>
                 <Select
                   defaultValue={selectedOption}
@@ -1683,7 +1670,7 @@ const ManualKycWindow = () => {
                 )}
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="Pincode">Pincode<span> *</span></label>
                 <input
                   type="text"
@@ -1694,7 +1681,7 @@ const ManualKycWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="businessEmailID">Business Email ID<span> *</span></label>
                 <input
                   type="text"
@@ -1705,7 +1692,7 @@ const ManualKycWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="contactNo">Contact No.<span> *</span></label>
                 <input
                   type="text"
@@ -1716,7 +1703,11 @@ const ManualKycWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+            </div>
+
+            <div className="configSelectBoxTop row mb-0">
+
+              <div className="clientNameSelect col-3">
                 <label htmlFor="landlineNo">Landline No.<span> *</span></label>
                 <input
                   type="text"
@@ -1727,7 +1718,7 @@ const ManualKycWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="alternateNo">Alternate No.<span> *</span></label>
                 <input
                   type="text"
@@ -1739,19 +1730,21 @@ const ManualKycWindow = () => {
               </div>
 
             </div>
-
             {/* extra form 2 */}
-            <div className="hrGreyLine my-4 extra-form-hr "></div>
+            <div className="hrGreyLine my-4"></div>
 
-            <div className="configSelectBoxTop configSelectBoxTop2 row">
+            <div className="configSelectBoxTop row">
               {/* to add TextArea */}
-              <div className="clientNameSelect col-12 d-flex flex-column">
+              <div className="clientNameSelect col d-flex flex-column">
 
                 <label htmlFor="Area">Shop Address<span> *</span></label>
                 <textarea className="textAreaBox" placeholder="Enter Local Address" id="ShopAddress" rows={3}></textarea>
               </div>
+            </div>
 
-              <div className="clientNameSelect col-sm-3">
+            <div className="configSelectBoxTop row">
+
+              <div className="clientNameSelect col-3">
                 <label htmlFor="ShopCountry">Shop Country<span>*</span></label>
                 <Select
                   defaultValue={selectedOption}
@@ -1771,7 +1764,7 @@ const ManualKycWindow = () => {
                 )}
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="ShopArea">Shop Area<span> *</span></label>
                 <input
                   type="text"
@@ -1782,7 +1775,7 @@ const ManualKycWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="ShopState">Shop State<span>*</span></label>
                 <Select
                   defaultValue={selectedOption}
@@ -1802,7 +1795,7 @@ const ManualKycWindow = () => {
                 )}
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="ShopDistrict">Shop District<span> *</span></label>
                 <input
                   type="text"
@@ -1813,8 +1806,11 @@ const ManualKycWindow = () => {
                 />
               </div>
 
+            </div>
 
-              <div className="clientNameSelect col-sm-3">
+            <div className="configSelectBoxTop row">
+
+              <div className="clientNameSelect col-3">
                 <label htmlFor="LocalCityName">Shop City<span>*</span></label>
                 <Select
                   defaultValue={selectedOption}
@@ -1834,7 +1830,7 @@ const ManualKycWindow = () => {
                 )}
               </div>
 
-              <div className="clientNameSelect col-sm-3">
+              <div className="clientNameSelect col-3">
                 <label htmlFor="Pincode2">Pincode<span> *</span></label>
                 <input
                   type="text"
@@ -1853,83 +1849,29 @@ const ManualKycWindow = () => {
         </div>
 
         {/* Stage Btn */}
-        <div className="text-center btnsBtm mb-4 btnsBtmMobile ">
-          <button type="button" className="btnPrimaryOutline"
-          onClick={() => setResetFilters(!resetFilters)}>Cancel</button>
+        <div className="text-center btnsBtm my-3">
+          <button type="button" className="btnPrimaryOutline">Cancel</button>
           <button type="button"
             className={flow > 1 ? "btnPrimaryOutline ms-2" : "d-none"}
             onClick={prevForm}
           >Previous</button>
           {/* Save and next */}
           <button type="button"
-            className={flow < 4 ? "btnPrimary btnMobile ms-2" : "d-none"}
+            className={flow < 4 ? "btnPrimary ms-2" : "d-none"}
             onClick={nextForm}
           >Save & Next</button>
 
           {/* submit */}
           <button type="button"
             className={flow == 4 ? "btnPrimary ms-2" : "d-none"}
-            onClick={() => setSaveFilters(!saveFilters)}
           >Submit</button>
         </div>
 
 
-
       </div>
-
-              {/* form Success Modal */}
-        {saveFilters && (
-          <Modal
-            show={saveFilters}
-            onHide={() => setSaveFilters(!saveFilters)}
-            centered
-            className="defaultThemeModal saveFiltersModal"
-          >
-            <Modal.Header closeButton>
-              <Modal.Title className="fontSize16-sm letterSpacing-2">
-                Manual KYC Registration
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="text-center">
-              <img src={Success} alt="Success" />
-              <p className="letterSpacing-2 colorBlack">
-                Form Submitted Successfully!
-              </p>
-            </Modal.Body>
-          </Modal>
-        )}
-
-
-                {/* Form Cancel */}
-        {resetFilters && (
-          <Modal
-            show={resetFilters}
-            onHide={() => setResetFilters(!resetFilters)}
-            centered
-            className="defaultThemeModal saveFiltersModal errorFiltersModal"
-          >
-            <Modal.Header closeButton>
-              <Modal.Title className="fontSize16-sm letterSpacing-2">
-                Manual KYC Registration
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="text-center">
-              <img src={Error} alt="Success" />
-              <p className="letterSpacing-2 colorBlack">
-                Are you sure to cancel the <br /> registration?
-              </p>
-              <div className="mt-3 pt-1">
-                <button type="button" className="btnPrimaryOutline"
-                onClick={() => setResetFilters(!resetFilters)}>Cancel</button>
-                <button type="button" className="btnPrimary ms-2"
-                onClick={() => setResetFilters(!resetFilters)}>Yes</button>
-              </div>
-            </Modal.Body>
-          </Modal>
-        )}
 
     </div>
   );
 };
 
-export default ManualKycWindow;
+export default TicketWindow;

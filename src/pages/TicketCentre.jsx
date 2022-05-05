@@ -8,7 +8,7 @@ import Header from "../components/common/Header";
 import TicketMain from "../components/ticketCentre/TicketMain";
 import Footer from "../components/common/Footer";
 
-const AgegingQueueWise = () => {
+const TicketCentre = () => {
   return (
     <div>
       <Header />
@@ -18,4 +18,4 @@ const AgegingQueueWise = () => {
   );
 };
 
-export default AgegingQueueWise;
+export default TicketCentre;
