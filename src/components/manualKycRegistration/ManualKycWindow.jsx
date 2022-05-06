@@ -298,6 +298,7 @@ const ManualKycWindow = () => {
                 onChange={() => {
                   setClientName();
                   changeClientName();
+                  setSelectedOption();
                 }}
                 options={options}
                 id="clientName"
