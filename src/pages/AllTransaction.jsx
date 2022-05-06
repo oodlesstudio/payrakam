@@ -2,21 +2,21 @@ import React from "react";
 // CSS
 import "../components/common/common.css";
 import "../components/common/main.css";
-import '../components/agentRegistration/AgentRegistration.css'
+import '../components/allTransaction/AllTransaction.css'
 
 // Components
 import Header from "../components/common/Header";
-import AgentRegistrationMain from "../components/agentRegistration/AgentRegistrationMain";
+import AllTransactionMain from "../components/allTransaction/AllTransactionMain";
 import Footer from "../components/common/Footer";
 
-const AgentRegistration = () => {
+const AllTransaction = () => {
   return (
-    <div>
+        <div>
       <Header />
-      <AgentRegistrationMain />
+      <AllTransactionMain />
       <Footer />
     </div>
   )
 }
 
-export default AgentRegistration
+export default AllTransaction

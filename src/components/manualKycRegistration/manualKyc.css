@@ -258,8 +258,8 @@
   display: flex;
   align-items: center;
   height: 31px;
-  margin-bottom: 30px;
-  width: 90%;
+  margin-bottom: 25px;
+  width: 91%;
 }
 
 .form-step.active .barText{
@@ -316,7 +316,7 @@
 
 .formFlow-text-1 {
   position: absolute;
-  bottom: -28px;
+  bottom: -25px;
   /* left: -50%; */
   transform: translateX(-40%);
   font-size: var(--font-size14);
@@ -369,6 +369,11 @@
   padding: 0 6px;
 }
 
+.formflow .col-sm-4,
+.formflow .col-lg-3 {
+  padding: 0 6px;
+}
+
 .textAreaBox {
   background-color: var(--border-box-bg);
   border: 1px solid var(--color-border-default);
@@ -396,61 +401,19 @@
   margin-bottom: 12px;
 }
 
-
-
-/* Responsive */
-@media(max-width:768px){
-  .form-Steps {
-    width: 85%;
-  }
-
-}
-
-@media(max-width:375px){
-
-  .availBalance{
-    display: none !important;
-  }
-
-  .barText {
-    display: none;
-  }
-
-  .form-Steps{
-    margin-bottom: 12px;
-  }
-
-  .btnsBtmMobile{
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .btnsBtmMobile button{
-    margin: 0 !important;
-    width: 100% !important;
-    margin-bottom: 12px !important;
-  }
-  .form-Steps {
-    width: 95%;
-  }
-
-  .extra-form-hr{
-    display: none;
-  }
-  .xtraFormBottomMargin{
-    margin-bottom: 0px !important;
-  }
-
+.identificationContainer .configSelectBoxTop {
+  margin-top: 10px;
 }
 
 
 
 
-/* .btnsMobileBtm{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
-} */
+
+
+.btnsBtmMobile{
+  margin-top: 6px !important;
+  margin-bottom: 18px !important;
+}
 
 /* .row-week
 .col{
@@ -461,4 +424,66 @@
 .row-week .col{
   width: 94px;
   margin-right: 20px;
+}
+
+
+.form-check{
+  min-height: inherit;
+}
+
+.gst-check{
+  padding-bottom: 8px;
+}
+
+
+/* Responsive */
+@media(max-width:768px) {
+  .form-Steps {
+    width: 85%;
+  }
+
+}
+
+@media(max-width:375px) {
+
+  .availBalance {
+    display: none !important;
+  }
+
+  .barText {
+    display: none;
+  }
+
+  .form-Steps {
+    margin-bottom: 12px;
+  }
+
+  .btnsBtmMobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .btnsBtmMobile button {
+    margin: 0 !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+
+  .form-Steps {
+    width: 95%;
+  }
+
+  .extra-form-hr {
+    display: none;
+  }
+
+  .xtraFormBottomMargin {
+    margin-bottom: 0px !important;
+  }
+
+  .btnsBtmMobile {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
 }

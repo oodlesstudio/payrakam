@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AgegingQueueWise from "../pages/AgegingQueueWise";
+import AgentRegistration from "../pages/AgentRegistration";
 // Components
 import BranchTerminalRegistration from "../pages/BranchTerminalRegistration";
 import FieldIdentificationConfig from "../pages/FieldIdentificationConfig";
 import ManualKycRegistration from "../pages/ManualKycRegistration";
+import AllTransaction from "../pages/AllTransaction";
 import OnlineCbrEntry from "../pages/OnlineCbrEntry";
 
 const router = () => {
@@ -20,9 +22,12 @@ const router = () => {
           element={<FieldIdentificationConfig />}
         />
         <Route path="/online-cbr-entry" element={<OnlineCbrEntry />} />
-        {/* <Route path="/" element={<TicketCentre />} /> */}
         <Route path="/ageging-queue-wise" element={<AgegingQueueWise />} />
+
+        
         <Route path="/" element={<ManualKycRegistration />} />
+        <Route path="/agent-registration" element={<AgentRegistration />} />
+        <Route path="/all-Transaction" element={<AllTransaction />} />
       </Routes>
     </BrowserRouter>
   );
