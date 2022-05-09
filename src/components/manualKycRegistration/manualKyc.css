@@ -257,7 +257,7 @@
 .form-Steps {
   display: flex;
   align-items: center;
-  height: 31px;
+  height: 24px;
   margin-bottom: 25px;
   width: 91%;
 }
@@ -435,6 +435,10 @@
   padding-bottom: 8px;
 }
 
+.flowcircle1Svg{
+  margin-left: -2px;
+}
+
 
 /* Responsive */
 @media(max-width:768px) {
@@ -486,4 +490,15 @@
     margin-bottom: 6px !important;
   }
 
+}
+
+
+@media(max-width:425px){
+    .barText {
+        display: none;
+      }
+            .row-week .col {
+              width: 90px;
+              margin-right: 20px;
+            }
 }

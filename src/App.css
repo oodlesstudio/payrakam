@@ -387,6 +387,11 @@ input[type="number"] {
 .mb-16 {
   margin-bottom: 16px !important;
 }
+
+.mb-24{
+  margin-bottom: 24px !important;
+}
+
 .mb-12 {
   margin-bottom: 12px !important;
 }

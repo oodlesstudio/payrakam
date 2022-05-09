@@ -2,21 +2,21 @@ import React from "react";
 // CSS
 import "../components/common/common.css";
 import "../components/common/main.css";
-import "../components/agentRegistration/AgentRegistration.css";
+import "../components/aepsTransaction/AepsTransaction.css";
 
 // Components
 import Header from "../components/common/Header";
-import AgentRegistrationMain from "../components/agentRegistration/AgentRegistrationMain";
+import AepsTransactionMain from "../components/aepsTransaction/AepsTransactionMain";
 import Footer from "../components/common/Footer";
 
-const AgentRegistration = () => {
+const AepsTransactions = () => {
   return (
     <div>
       <Header />
-      <AgentRegistrationMain />
+      <AepsTransactionMain />
       <Footer />
     </div>
   );
 };
 
-export default AgentRegistration;
+export default AepsTransactions;

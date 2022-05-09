@@ -93,7 +93,6 @@ const SideBar = (props) => {
                 <li>
                   <Link
                     to="/ageging-queue-wise"
-                    className={activeLink("/ageging-queue-wise")}
                   >
                     <span className="subMenuLeft">
                       <span class="icon-Icon-2"></span>
@@ -830,16 +829,6 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/agent-registration" className={activeLink("/agent-registration")}>
-                    <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
-                    </span>
-                    <span className="subMenuRight">
-                    Agent Registration
-                    </span>
-                  </Link>
-                </li>
-                <li>
                   <Link to="/dummy-text">
                     <span className="subMenuLeft">
                       <span class="icon-Icon-2"></span>
@@ -930,11 +919,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingTransactionReport">
             <button
-              className={activeBtnClass("/dummy-text")}
+              className={activeBtnClass("/all-transaction")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTransactionReport"
-              aria-expanded={activeAriaExpand("/dummy-text")}
+              aria-expanded={activeAriaExpand("/all-transaction")}
               aria-controls="collapseTransactionReport"
             >
               <span class="sidebarIconSize">
@@ -961,7 +950,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseTransactionReport"
-            className={activeAccordionBodyClass("/dummyDownload-text")}
+            className={activeAccordionBodyClass("/all-transaction")}
             aria-labelledby="headingTransactionReport"
             data-bs-parent="#accordionExample"
           >
@@ -976,7 +965,7 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dummy-text">
+                  <Link to="/all-transaction" className={activeLink("/all-transaction")}>
                     <span className="subMenuLeft">
                       <span class="icon-Icon-2"></span>
                     </span>
@@ -1024,7 +1013,7 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dummy-text">
+                  <Link to="/aeps-transactions">
                     <span className="subMenuLeft">
                       <span class="icon-Icon-2"></span>
                     </span>

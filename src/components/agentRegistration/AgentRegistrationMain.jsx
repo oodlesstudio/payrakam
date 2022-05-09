@@ -11,7 +11,7 @@ const AgentRegistrationMain = () => {
   });
 
   return (
-        <div className="mainView d-flex">
+    <div className="mainView d-flex">
       <SidebarMain />
       <div className={company.sidebarOpen ? "sidebarOpened" : "sidebarClosed"}>
         <AgentRegistrationWindow />

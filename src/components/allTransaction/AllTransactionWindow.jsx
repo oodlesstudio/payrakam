@@ -119,9 +119,11 @@ const AllTransactionWindow = () => {
         </div>
       </div>
 
-
       {/* Search Criteria 2 */}
-      <div className="accordion searchCriteriaBox searchCriteriaBox2" id="CriteriaFilters">
+      <div
+        className="accordion searchCriteriaBox searchCriteriaBox2"
+        id="CriteriaFilters"
+      >
         <div className="accordion-item">
           <div
             className="d-flex justify-content-between align-items-center configLeftFilters accordion-header"
@@ -268,7 +270,7 @@ const AllTransactionWindow = () => {
                     classNamePrefix="reactSelectBox"
                     placeholder="All"
                   />
-                                    {agent && (
+                  {agent && (
                     <p className="text-danger font-size9">
                       Enter a correct input
                     </p>
@@ -288,7 +290,7 @@ const AllTransactionWindow = () => {
                     classNamePrefix="reactSelectBox"
                     placeholder="All"
                   />
-                                                      {channel && (
+                  {channel && (
                     <p className="text-danger font-size9">
                       Enter a correct input
                     </p>
@@ -307,7 +309,9 @@ const AllTransactionWindow = () => {
                 </div>
 
                 <div className="clientNameSelect col col-Criteria">
-                  <label htmlFor="partnerTransactionID">Partner Transaction ID</label>
+                  <label htmlFor="partnerTransactionID">
+                    Partner Transaction ID
+                  </label>
                   <input
                     type="text"
                     name="partnerTransactionID"
@@ -316,7 +320,6 @@ const AllTransactionWindow = () => {
                     className="inputTextBox"
                   />
                 </div>
-
               </div>
               <div className="text-center btnsBtm">
                 <button
@@ -592,7 +595,6 @@ const AllTransactionWindow = () => {
                       <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
-
                 </tr>
               </thead>
               <tbody>
@@ -603,9 +605,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Non Financial</td>
-                  <td>
-                    BalanceEnquiry
-                  </td>
+                  <td>BalanceEnquiry</td>
                   <td>NA</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -621,9 +621,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Financial</td>
-                  <td>
-                    Withdrawl
-                  </td>
+                  <td>Withdrawl</td>
                   <td>Credit</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -639,9 +637,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Non Financial</td>
-                  <td>
-                    Fund Transfer
-                  </td>
+                  <td>Fund Transfer</td>
                   <td>NA</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -657,9 +653,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Non Financial</td>
-                  <td>
-                    BalanceEnquiry
-                  </td>
+                  <td>BalanceEnquiry</td>
                   <td>NA</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -675,9 +669,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Financial</td>
-                  <td>
-                    Withdrawl
-                  </td>
+                  <td>Withdrawl</td>
                   <td>Credit</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -693,9 +685,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Non Financial</td>
-                  <td>
-                    Fund Transfer
-                  </td>
+                  <td>Fund Transfer</td>
                   <td>NA</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -711,9 +701,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Non Financial</td>
-                  <td>
-                    BalanceEnquiry
-                  </td>
+                  <td>BalanceEnquiry</td>
                   <td>NA</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -729,9 +717,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Financial</td>
-                  <td>
-                    Withdrawl
-                  </td>
+                  <td>Withdrawl</td>
                   <td>Credit</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -747,9 +733,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Non Financial</td>
-                  <td>
-                    Fund Transfer
-                  </td>
+                  <td>Fund Transfer</td>
                   <td>NA</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -765,9 +749,7 @@ const AllTransactionWindow = () => {
                     </div>
                   </td>
                   <td>Non Financial</td>
-                  <td>
-                    BalanceEnquiry
-                  </td>
+                  <td>BalanceEnquiry</td>
                   <td>NA</td>
                   <td>2018452269826</td>
                   <td>2018452269826</td>
@@ -776,7 +758,6 @@ const AllTransactionWindow = () => {
                   <td>00.00</td>
                   <td>00.00</td>
                 </tr>
-
               </tbody>
             </table>
           </div>
@@ -1114,7 +1095,7 @@ const AllTransactionWindow = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AllTransactionWindow
+export default AllTransactionWindow;

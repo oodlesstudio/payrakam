@@ -42,6 +42,7 @@
     width: 100%;
     display: flex;
     overflow-x: auto;
+    flex-wrap: wrap;
 }
 
 .summaryRow .summaryTableBox:first-child {
@@ -234,7 +235,7 @@
 }
 
 
-.searchCriteriaBox2 .configTopBlueBox{
+.searchCriteriaBox2 .configTopBlueBox {
     min-height: initial;
 }
 
@@ -243,11 +244,47 @@
     width: 272px;
     margin-left: 0px;
 }
-.summaryRow .summaryTableBox.summaryTableBox2:not(:last-child){
+
+.summaryRow .summaryTableBox.summaryTableBox2:not(:last-child) {
     margin-right: 6px;
 }
 
 
-.tableBorderBox .table.table-striped.all-transaction{
+.tableBorderBox .table.table-striped.all-transaction {
     width: 1335px;
+}
+
+
+@media(max-width:768px) {
+    .summaryRow .summaryTableBox.summaryTableBox2 {
+        width: 230px;
+        margin-left: 0px;
+    }
+
+    .identificationContainer .accordion-body .configSelectBoxTop .col-Criteria {
+        flex: inherit;
+        padding: 0 6px;
+        width: 33%;
+        margin-top: 12px;
+    }
+}
+
+
+@media(max-width:425px) {
+    .summaryRow .summaryTableBox.summaryTableBox2 {
+        width: 327px;
+        margin-left: 0px;
+    }
+
+    .identificationContainer .accordion-body .configSelectBoxTop .col-Criteria {
+        flex: inherit;
+        padding: 0 6px;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .summaryRow {
+        width: 100%;
+        justify-content: center;
+    }
 }
