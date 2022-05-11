@@ -13,10 +13,10 @@ import Error from "../../images/common/error.svg";
 import Success from "../../images/common/success.svg";
 
 const options = [
-  { value: "option", label: "option" },
-  { value: "option", label: "option" },
-  { value: "option", label: "option" },
-  { value: "option", label: "option" },
+  { value: "option1", label: "option" },
+  { value: "option2", label: "option" },
+  { value: "option3", label: "option" },
+  { value: "option4", label: "option" },
 ];
 
 const ManualKycWindow = () => {
@@ -1938,7 +1938,7 @@ const ManualKycWindow = () => {
           show={saveFilters}
           onHide={() => setSaveFilters(!saveFilters)}
           centered
-          className="defaultThemeModal saveFiltersModal"
+          className="defaultThemeModal saveFiltersModal centeredModal"
         >
           <Modal.Header closeButton>
             <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -1960,7 +1960,7 @@ const ManualKycWindow = () => {
           show={resetFilters}
           onHide={() => setResetFilters(!resetFilters)}
           centered
-          className="defaultThemeModal saveFiltersModal errorFiltersModal"
+          className="defaultThemeModal saveFiltersModal errorFiltersModal centeredModal"
         >
           <Modal.Header closeButton>
             <Modal.Title className="fontSize16-sm letterSpacing-2">

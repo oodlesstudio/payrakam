@@ -348,6 +348,9 @@
 
 /* grid col padding 6px */
 
+.formflow .col-12{
+      padding: 0 6px;
+}
 .formflow .col-3,.formflow .col-md-3{
       padding: 0 6px;
 }

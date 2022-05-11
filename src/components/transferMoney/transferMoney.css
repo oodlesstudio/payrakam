@@ -249,13 +249,106 @@
 }
 
 
-.tableBorderBox .table.table-striped.all-transaction {
-    width: 1335px;
+.tableBorderBox .table.table-striped.transfer-money {
+    width: 100%;
+}
+
+.tableBorderBox .table.table-striped.transfer-money-2 {
+    width: 100%;
 }
 
 
+/* Transfer Money CSS */
+
+.remitter-Search {
+    border-radius: 8px;
+    background-color: var(--color-light-blue);
+    border: 1px solid var(--color-border-default);
+    padding: 12px;
+}
+
+.remitter-SearchField {
+    display: flex;
+    align-items: center;
+}
+
+
+.has-search.hasRemitter-Search .form-control {
+    width: 200px;
+    height: 32px;
+    border-color: var(--color-border-default);
+    padding-left: 12px;
+    font-family: "Inter";
+    font-size: var(--font-size14);
+    letter-spacing: 0.02em;
+    color: var(--color-black);
+    background-color: var(--background-white);
+}
+
+.Remitter-col-Width {
+    width: 22.4%;
+}
+
+.remitterText {
+    font-size: var(--font-size14);
+    color: var(--color-black);
+}
+
+.remitterText~span {
+    font-size: var(--font-size14);
+    color: var(--color-primary-default);
+    text-decoration: underline;
+    font-weight: var(--font-weight-500);
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.BeneficiaryHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.BeneficiaryHeader h5 {
+    font-size: var(--font-size18);
+    font-weight: var(--font-weight-600);
+}
+
+.beneficiaryBtn {
+    background-color: transparent;
+    border: 1px solid var(--color-primary-default);
+    border-radius: 4px;
+    width: 140px;
+    height: 32px;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: var(--font-size14);
+    color: var(--color-primary-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.act-delete-Btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: var(--color-secondary-light-defaut);
+    border: 1px solid var(--delete-box-border);
+}
+
+.act-transfer-Btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: var(--color-green-box);
+    border: 1px solid var(--delete-box-border);
+    margin-left: 6px;
+}
+
 @media(max-width:768px) {
-.summaryRow.summaryRow2 {
+    .summaryRow.summaryRow2 {
         flex-wrap: wrap;
     }
 
@@ -270,14 +363,22 @@
         width: 33%;
         margin-top: 12px;
     }
+
+    .tableBorderBox .table.table-striped.transfer-money {
+        width: 1000px;
+    }
+
+    .tableBorderBox .table.table-striped.transfer-money-2 {
+        width: 1000px;
+    }
 }
 
 
 @media(max-width:425px) {
     .summaryRow.summaryRow2 {
-            flex-wrap: wrap;
-        }
-        
+        flex-wrap: wrap;
+    }
+
     .summaryRow .summaryTableBox.summaryTableBox2 {
         width: 327px;
         margin-left: 0px;
@@ -293,5 +394,24 @@
     .summaryRow {
         width: 100%;
         justify-content: center;
+    }
+
+    .remitter-SearchField {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .has-search.hasRemitter-Search .form-control {
+        width: 100%;
+
+    }
+
+    .full-width{
+        width: 100%;
+    }
+
+    .searchFieldsBtns{
+        margin-top: 12px;
     }
 }

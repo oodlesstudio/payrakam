@@ -371,7 +371,7 @@ const AllTransactionWindow = () => {
             data-bs-parent="#unmatchedFilters"
           >
             <div className="accordion-body">
-              <div className="summaryRow">
+              <div className="summaryRow summaryRow2">
                 <div className="summaryTableBox summaryTableBox2">
                   <p className="fontWeight-600 fontSize12">Total Transaction</p>
                   <table className="table table-borderless summaryContentLeft">

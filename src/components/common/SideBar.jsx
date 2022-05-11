@@ -1013,7 +1013,7 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/aeps-transactions">
+                  <Link to="/dummy-text">
                     <span className="subMenuLeft">
                       <span class="icon-Icon-2"></span>
                     </span>
