@@ -461,7 +461,14 @@ input:disabled::placeholder {
 
 
 @media(max-width:768px) {
-  .availBalData {
+.headerLeft.headerLeftTab{
+  width: 340px;
+}
+}
+@media(max-width:375px) {
+  .availBalText {
     display: none;
   }
 }
+
+

@@ -154,7 +154,7 @@ const AllTransactionWindow = () => {
           >
             <div className="accordion-body">
               <div className="hrGreyLine"></div>
-              <div className="configSelectBoxTop configTopBlueBox row">
+              <div className="configSelectBoxTop configTopBlueBox mt-0 row">
                 <div className="clientNameSelect col col-Criteria">
                   <label htmlFor="startDate">Start Date</label>
                   <input
@@ -228,7 +228,7 @@ const AllTransactionWindow = () => {
                     options={options}
                     id="clientName"
                     classNamePrefix="reactSelectBox"
-                    placeholder="All"
+                    placeholder="Dropdown"
                   />
                   {clientName && (
                     <p className="text-danger font-size9">
@@ -248,7 +248,7 @@ const AllTransactionWindow = () => {
                     options={options}
                     id="clientName"
                     classNamePrefix="reactSelectBox"
-                    placeholder="All"
+                    placeholder="Dropdown"
                   />
                   {franchise && (
                     <p className="text-danger font-size9">
@@ -268,7 +268,7 @@ const AllTransactionWindow = () => {
                     options={options}
                     id="clientName"
                     classNamePrefix="reactSelectBox"
-                    placeholder="All"
+                    placeholder="Dropdown"
                   />
                   {agent && (
                     <p className="text-danger font-size9">
@@ -288,7 +288,7 @@ const AllTransactionWindow = () => {
                     options={options}
                     id="clientName"
                     classNamePrefix="reactSelectBox"
-                    placeholder="All"
+                    placeholder="Dropdown"
                   />
                   {channel && (
                     <p className="text-danger font-size9">

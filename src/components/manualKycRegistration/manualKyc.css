@@ -452,11 +452,6 @@
 }
 
 @media(max-width:375px) {
-
-  .availBalance {
-    display: none !important;
-  }
-
   .barText {
     display: none;
   }

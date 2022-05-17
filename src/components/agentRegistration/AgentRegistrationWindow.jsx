@@ -129,32 +129,7 @@ const AgentRegistrationWindow = () => {
                     type="button"
                     onClick={() => setPage("manualKycRegistration")}
                   >
-                    <span class="">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          x="7.2"
-                          y="2.3999"
-                          width="1.6"
-                          height="11.2"
-                          rx="0.8"
-                          fill="#003087"
-                        />
-                        <rect
-                          x="2.4"
-                          y="7.19995"
-                          width="11.2"
-                          height="1.6"
-                          rx="0.8"
-                          fill="#003087"
-                        />
-                      </svg>
-                    </span>
+                    <span className="icon-add"></span>
                     <span className="ms-1 fontSize12-m colorPrimaryDefault">
                       Add New
                     </span>
@@ -165,37 +140,7 @@ const AgentRegistrationWindow = () => {
                     type="button"
                     onClick={() => setAttachment(!attachment)}
                   >
-                    <span class="">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3.356 6.07788C2.72547 6.23654 2.17459 6.61999 1.80684 7.15618C1.43909 7.69236 1.27979 8.34438 1.35887 8.98974C1.43795 9.63509 1.74998 10.2294 2.23631 10.6609C2.72265 11.0924 3.34982 11.3315 4 11.3332H4.66667M8 7.99988V13.9999V7.99988ZM8 7.99988L6.33333 9.33321L8 7.99988ZM8 7.99988L9.66667 9.33321L8 7.99988Z"
-                          stroke="#003087"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M10.5533 4.75864C10.3255 3.85636 9.76306 3.07447 8.98009 2.57148C8.19712 2.06849 7.25218 1.88204 6.33684 2.04991C5.42149 2.21779 4.60423 2.72743 4.05071 3.47553C3.49719 4.22364 3.24884 5.15422 3.356 6.07864C3.356 6.07864 3.458 6.66664 3.66667 6.99997"
-                          stroke="#003087"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M11.3333 11.3332C11.804 11.3328 12.2693 11.2328 12.6986 11.0397C13.1278 10.8466 13.5113 10.5648 13.8238 10.2128C14.1363 9.86082 14.3707 9.44664 14.5116 8.99752C14.6525 8.54841 14.6966 8.07455 14.6412 7.60713C14.5857 7.13972 14.4319 6.68935 14.1899 6.28566C13.9478 5.88198 13.623 5.53414 13.2368 5.26503C12.8506 4.99592 12.4119 4.81165 11.9493 4.72434C11.4868 4.63704 11.011 4.64868 10.5533 4.7585L9.66667 4.99984"
-                          stroke="#003087"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
+                    <span className="icon-Bulk-upload"></span>
                     <span className="ms-1 fontSize12-m colorPrimaryDefault">
                       Bulk Import
                     </span>
@@ -205,43 +150,7 @@ const AgentRegistrationWindow = () => {
                     className="allFiltersBtn btn p-0 d-flex justify-content-center align-items-center agentRegBtn"
                     type="button"
                   >
-                    <span class="">
-                      <svg
-                        width="17"
-                        height="16"
-                        viewBox="0 0 17 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clip-path="url(#clip0_3505_13505)">
-                          <path
-                            d="M2.25 8C2.25 8 4.25 3.75 8.5 3.75C12.75 3.75 14.75 8 14.75 8C14.75 8 12.75 12.25 8.5 12.25C4.25 12.25 2.25 8 2.25 8Z"
-                            stroke="#003087"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M8.5 9.25C9.19036 9.25 9.75 8.69036 9.75 8C9.75 7.30964 9.19036 6.75 8.5 6.75C7.80964 6.75 7.25 7.30964 7.25 8C7.25 8.69036 7.80964 9.25 8.5 9.25Z"
-                            fill="#003087"
-                            stroke="#003087"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_3505_13505">
-                            <rect
-                              width="16"
-                              height="16"
-                              fill="white"
-                              transform="translate(0.5)"
-                            />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </span>
+                    <span className="icon-eye-view sidebarIconSize"></span>
                     <span className="ms-1 fontSize12-m colorPrimaryDefault">
                       View Audit Log
                     </span>
@@ -498,7 +407,7 @@ const AgentRegistrationWindow = () => {
                           aria-label="Previous"
                         >
                           <span
-                            class="icon-Breadcrumb-Arrow"
+                            className="icon-Breadcrumb-Arrow"
                             style={{
                               fontSize: "16px",
                               transform: "rotate(180deg)",
@@ -540,7 +449,7 @@ const AgentRegistrationWindow = () => {
                         >
                           <span>Last</span>
                           <span
-                            class="icon-Breadcrumb-Arrow"
+                            className="icon-Breadcrumb-Arrow"
                             style={{ fontSize: "16px" }}
                           ></span>
                         </Link>
@@ -558,7 +467,7 @@ const AgentRegistrationWindow = () => {
               show={attachment}
               onHide={() => setAttachment(!attachment)}
               centered
-              className="defaultThemeModal attachmentModal bulkAttachment unmatchedTableModal"
+              className="defaultThemeModal attachmentModal bulkAttachment unmatchedTableModal centeredModal"
               id="attachmentModal"
             >
               <Modal.Header closeButton>
@@ -652,10 +561,10 @@ const AgentRegistrationWindow = () => {
                 </div>
 
                 <div className="d-flex justify-content-center bulkAttachmentBtn ">
-                  <button type="button" class="btnPrimaryOutline">
+                  <button type="button" className="btnPrimaryOutline">
                     Cancel
                   </button>
-                  <button type="button" class="btnPrimary btnMobile ms-2">
+                  <button type="button" className="btnPrimary btnMobile ms-2">
                     import
                   </button>
                 </div>

@@ -325,9 +325,9 @@
 }
 
 
-.attachmentUploadBox.active {
+/* .attachmentUploadBox.active {
     border: none;
-}
+} */
 
 .attachmentUploadBox .beforeAttachmentUpload {
     display: flex;
@@ -337,13 +337,13 @@
     display: none;
 }
 
-.attachmentUploadBox.active .beforeAttachmentUpload {
+/* .attachmentUploadBox.active .beforeAttachmentUpload {
     display: none;
 }
 
 .attachmentUploadBox.active .afterAttachmentUpload {
     display: block;
-}
+} */
 
 
 .bulkAttachmentBox {

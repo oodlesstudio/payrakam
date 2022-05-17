@@ -92,12 +92,12 @@ const AepsTransactionWindow = () => {
       {/* Bottom Content */}
       <div className="configLeftBottom mt-0">
         <div className="row gx-0">
-          <div className="col-lg-5 col-sm-12  borderBoxSideway">
+          <div className="col-lg-5 col-sm-12  borderBoxSideway maxHeightBox">
             <div className="tableBorderBox tableBorderBox-2">
               {/* Heading */}
               <div className="aepsHeading">AEPS - Balance Enquiry</div>
               <div className="aepsBox aepsTabBox">
-                <div className="configSelectBoxTop configSelectBoxTop2 mt-3 mb-0  row">
+                <div className="configSelectBoxTop configSelectBoxTop2 mt-3 mb-0 p-0  row">
                   <div className="clientNameSelect col-12">
                     <label htmlFor="dob">Transaction Type</label>
                     <div className="row row-cols-auto row-transaction ">
@@ -264,7 +264,7 @@ const AepsTransactionWindow = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-7 col-sm-12  aepsRecentTransactionBox">
+          <div className="col-lg-7 col-sm-12  aepsRecentTransactionBox maxHeightBox">
             <div className="tableBorderBox tableBorderBox-2">
               {/* Heading */}
               <div className="aepsHeading">Recent Transactions</div>
@@ -502,7 +502,7 @@ const AepsTransactionWindow = () => {
                             aria-label="Previous"
                           >
                             <span
-                              class="icon-Breadcrumb-Arrow"
+                              className="icon-Breadcrumb-Arrow"
                               style={{
                                 fontSize: "16px",
                                 transform: "rotate(180deg)",
@@ -544,7 +544,7 @@ const AepsTransactionWindow = () => {
                           >
                             <span>Last</span>
                             <span
-                              class="icon-Breadcrumb-Arrow"
+                              className="icon-Breadcrumb-Arrow"
                               style={{ fontSize: "16px" }}
                             ></span>
                           </Link>
@@ -657,10 +657,10 @@ const AepsTransactionWindow = () => {
             </div>
 
             <div className="d-flex justify-content-center bulkAttachmentBtn ">
-              <button type="button" class="btnPrimaryOutline">
+              <button type="button" className="btnPrimaryOutline">
                 Cancel
               </button>
-              <button type="button" class="btnPrimary btnMobile ms-2">
+              <button type="button" className="btnPrimary btnMobile ms-2">
                 import
               </button>
             </div>
