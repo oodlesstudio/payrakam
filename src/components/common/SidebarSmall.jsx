@@ -1290,9 +1290,11 @@ const SidebarSmall = (props) => {
           overlay={agentManagementPopover}
           rootClose
         >
-          <span className="sidebarIconSize icon-agent-management">
-            {/* Agent Management Small Icon */}
-          </span>
+          <div className={activeLink("/")}>
+            <span className="sidebarIconSize icon-agent-management">
+              {/* Agent Management Small Icon */}
+            </span>
+          </div>
         </OverlayTrigger>
       </div>
 
@@ -1304,9 +1306,11 @@ const SidebarSmall = (props) => {
           overlay={transactionReportPopover}
           rootClose
         >
-          <span className="sidebarIconSize icon-Transaction-report">
-            {/* Transaction Report Icon */}
-          </span>
+          <div className={activeLink("/all-transaction")}>
+            <span className="sidebarIconSize icon-Transaction-report">
+              {/* Transaction Report Icon */}
+            </span>
+          </div>
         </OverlayTrigger>
       </div>
 

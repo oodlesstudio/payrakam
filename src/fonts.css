@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?x8pz50');
-  src:  url('fonts/icomoon.eot?x8pz50#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?x8pz50') format('truetype'),
-    url('fonts/icomoon.woff?x8pz50') format('woff'),
-    url('fonts/icomoon.svg?x8pz50#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?6zexfu');
+  src:  url('fonts/icomoon.eot?6zexfu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?6zexfu') format('truetype'),
+    url('fonts/icomoon.woff?6zexfu') format('woff'),
+    url('fonts/icomoon.svg?6zexfu#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,38 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-wallet2:before {
-  content: "\e917";
-  color: var(--color-primary-default);
-}
-.icon-AEPS:before {
-  content: "\e906";
-  color: var(--color-primary-default);
-}
-.icon-BBPS:before {
-  content: "\e91c";
-  color: var(--color-primary-default);
-}
-.icon-Bulk-upload:before {
-  content: "\e913";
-  color: var(--color-primary-default);
-}
-.icon-DMT:before {
-  content: "\e914";
-  color: var(--color-primary-default);
-}
-.icon-eye-view:before {
-  content: "\e921";
-  color: var(--color-primary-default);
-}
-.icon-home:before {
-  content: "\e922";
-  color: var(--color-primary-default);
-}
-.icon-vertical-line:before {
-  content: "\e923";
-  color: var(--color-primary-default);
-}
 .icon-add:before {
   content: "\e900";
   color: var(--color-primary-default);
@@ -76,56 +44,65 @@
 .icon-Breadcrumb-Arrow:before {
   content: "\e904";
 }
-.icon-client-management:before {
+.icon-Bulk-upload:before {
   content: "\e905";
   color: var(--color-primary-default);
 }
-.icon-commission-management:before {
-  content: "\e907";
+.icon-client-management:before {
+  content: "\e906";
   color: var(--color-primary-default);
 }
-.icon-commission-report:before {
+.icon-commission-management:before {
   content: "\e908";
   color: var(--color-primary-default);
 }
-.icon-complaint:before {
+.icon-commission-report:before {
   content: "\e909";
   color: var(--color-primary-default);
 }
-.icon-dashboard:before {
+.icon-complaint:before {
   content: "\e90a";
   color: var(--color-primary-default);
 }
-.icon-delete:before {
+.icon-dashboard:before {
   content: "\e90b";
-  color: #c54031;
-}
-.icon-download:before {
-  content: "\e90c";
   color: var(--color-primary-default);
 }
-.icon-eva_arrow-ios-back-fill:before {
+.icon-delete:before {
+  content: "\e90c";
+  color: #c54031;
+}
+.icon-DMT:before {
   content: "\e90d";
-  color: #fff;
+  color: var(--color-primary-default);
 }
-.icon-fingerprint:before {
+.icon-download:before {
   content: "\e90e";
+  color: var(--color-primary-default);
 }
-.icon-franchise-management:before {
+.icon-eye-view:before {
   content: "\e90f";
   color: var(--color-primary-default);
 }
-.icon-Hamburger-Menu:before {
+.icon-franchise-management:before {
   content: "\e910";
+  color: var(--color-primary-default);
+}
+.icon-Hamburger-Menu:before {
+  content: "\e911";
     color: var(--color-black);
       font-size: 24px;
 }
+.icon-home:before {
+  content: "\e912";
+  color: var(--color-primary-default);
+}
 .icon-limit:before {
-  content: "\e911";
+  content: "\e913";
   color: var(--color-primary-default);
 }
 .icon-notification:before {
-  content: "\e912";
+  content: "\e914";
   color: var(--color-primary-default);
 }
 .icon-profile:before {
@@ -134,6 +111,10 @@
 }
 .icon-rupee:before {
   content: "\e916";
+  color: var(--color-primary-default);
+}
+.icon-Search:before {
+  content: "\e917";
   color: var(--color-primary-default);
 }
 .icon-search-header:before {
@@ -148,19 +129,27 @@
   content: "\e91a";
   color: var(--color-primary-default);
 }
-.icon-Transaction-report:before {
+.icon-Sort-icon:before {
   content: "\e91b";
+  color: #868686;
+}
+.icon-Transaction-report:before {
+  content: "\e91c";
   color: var(--color-primary-default);
 }
-.icon-wallet-copy:before {
+.icon-vertical-line:before {
   content: "\e91e";
   color: var(--color-primary-default);
 }
+.icon-wallet-copy:before {
+  content: "\e920";
+  color: var(--color-primary-default);
+}
 .icon-wallet:before {
-  content: "\e91f";
+  content: "\e921";
   color: var(--color-primary-default);
 }
 .icon-xlsheet:before {
-  content: "\e920";
+  content: "\e922";
   color: #5c5c5c;
 }
