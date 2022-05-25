@@ -1,1214 +1,1240 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, matchPath } from "react-router-dom";
 import { Popover, OverlayTrigger } from "react-bootstrap";
-
-const activeLink = (arr) => {};
-
-const dashboardPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction DashBoard</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Maximus Home</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/ageging-queue-wise"
-            className={activeLink("/ageging-queue-wise")}
-          >
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Distributor Home</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/atm-status">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Home</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Manage Bank IFSC Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Trend</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const CommissionManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Commission Master</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Wise Commission</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/ageging-queue-wise"
-            className={activeLink("/ageging-queue-wise")}
-          >
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Franchise Commission Master</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/atm-status">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Franchise Wise Commission</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Commission Master</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Wise Commission</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Commission Request</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Commission Status</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">BBPS Commission Master</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">BBPS Commission Request</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">BBPS Commission Tracker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">E-Collect Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Import Commission Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Commission Config Maker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Commission Config Cheker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Commission Report</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-const CommissionReportPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Commission Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Commission Summary</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Franchise Commission Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Franchise Commission Summary</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Commission Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Commission Summary</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Commission Settlement</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">
-              Franchise Commission Settlement
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Commission Settlement</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Maximus Commission</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Maximus Commission Summary</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Wallet Ledger</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Invoice Commission Approve</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Commission Slab Report</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const DownloadsPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Download Aggrements</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">BBPS Biller Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Manage Bank IFSC Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Import Billers</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">GST Commission Invoice</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Invoice Commission Approve</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Escalation Report</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const AdminManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Manages Pages</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Manages Users</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Create User</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Manage Permissions</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Create Roles</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Import ZOM Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">PUSH SMS</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">ZOM Details Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Terminal Log Configuration</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Pull Terminal Log</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const agentManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Approved Agents</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Deactive Agents</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Declined Agents</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Terminated Agents</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Manual KYC Registration</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Verification</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Onboard Agents</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Document Upload</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Edit Agent Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Status</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Update Agent ID</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent E-KYC</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">BBPS Biller Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">E-KYC Registration</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Device E-KYC Registration</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const transactionReportPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Log File</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/all-transaction">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">All Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Decline Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Reversal Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Current Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">DMT Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">BBPS Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">AEPS Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">MATM Transaction</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Settlement Tracker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">ZOM Details Report</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-const franchiseManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Registration</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Deactive Franchise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Document Upload</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Acive Franchise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Edit Franchise Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Verification</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Decline Franchise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Terminate Franchise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Onboared Franchise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Franchise Status</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-const clientManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Registration</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Document Upload</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Verification</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Active Client</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Decline Clients </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Deactivated Clients</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Terminated Clients</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Edit Client Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Onboared Franchise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Status</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-const walletManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Direct Credit/Debit Wallet</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Request Money</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Wallet Approval Maker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">My Wallet</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Balance Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Bank Transfer Approval</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Wallet Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">E-Collect Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Maximus Wallet Top-Up</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Client Wallet Ledger</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Franchise Wallet Ledger</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Agent Wallet Ledger</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Maximus Wallet Ledger</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Wallet To Wallet Ledger</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Wallet To Bank Transfer Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Current Balance Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Bulk Wallet To Wallet Transfer</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">MATM Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Wallet Approval Cheker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">
-              Wallet Bank Transfer Settlement
-            </span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const limitManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Limit Master</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Limit Requests</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Limit Tracker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Bank Transfer Limit Master</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Bank Transfer Limit Request</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Bank Transfer Limit Tracker</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const complaintManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Other Complaints</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">BBPS Complaints</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const settlementManagementPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Settlement</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">Transaction Settlement Tracker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">MATM Approval</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">MATM Tracker</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">MATM Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">WBT Settlement Request</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-vertical-line"></span>
-            </span>
-            <span className="subMenuRight">WBT Settlement Approval</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
 
 const SidebarSmall = (props) => {
   const path = useLocation().pathname;
 
+  // agent management Path
+  let agentManagementPath = matchPath("/agent-management/*", path);
+  if (agentManagementPath) {
+    agentManagementPath = agentManagementPath.pathnameBase;
+  }
+
+  // Transaction Report Path
+  let transactionReportPath = matchPath("/transaction-report/*", path);
+  if (transactionReportPath) {
+    transactionReportPath = transactionReportPath.pathnameBase;
+  }
+
   const activeLink = (arr) => {
     if (arr === path) {
+      return "activeTab";
+    }
+    if (arr === agentManagementPath) {
+      return "activeTab";
+    }
+    if (arr === transactionReportPath) {
       return "activeTab";
     } else {
       return "";
     }
   };
+
+  const dashboardPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Transaction DashBoard</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Maximus Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/ageging-queue-wise"
+              className={activeLink("/ageging-queue-wise")}
+            >
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Distributor Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/atm-status">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Manage Bank IFSC Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Transaction Trend</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const CommissionManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Commission Master</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Wise Commission</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/ageging-queue-wise"
+              className={activeLink("/ageging-queue-wise")}
+            >
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Franchise Commission Master</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/atm-status">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Franchise Wise Commission</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Commission Master</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Wise Commission</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Commission Request</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Commission Status</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">BBPS Commission Master</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">BBPS Commission Request</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">BBPS Commission Tracker</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">E-Collect Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Import Commission Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Commission Config Maker</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Commission Config Cheker</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Commission Report</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+  const CommissionReportPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Commission Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Commission Summary</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Franchise Commission Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Franchise Commission Summary</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Commission Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Commission Summary</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Commission Settlement</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">
+                Franchise Commission Settlement
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Commission Settlement</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Maximus Commission</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Maximus Commission Summary</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Wallet Ledger</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Invoice Commission Approve</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Commission Slab Report</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const DownloadsPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Download Aggrements</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">BBPS Biller Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Manage Bank IFSC Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Import Billers</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">GST Commission Invoice</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Invoice Commission Approve</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Escalation Report</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const AdminManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Manages Pages</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Manages Users</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Create User</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Manage Permissions</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Create Roles</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Import ZOM Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">PUSH SMS</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">ZOM Details Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Terminal Log Configuration</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Pull Terminal Log</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const agentManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Approved Agents</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Deactive Agents</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Declined Agents</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Terminated Agents</span>
+            </Link>
+          </li>
+          <li
+            className={activeLink("/agent-management/manual-kyc-registration")}
+          >
+            <Link to="/agent-management/manual-kyc-registration">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Manual KYC Registration</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Verification</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Onboard Agents</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Document Upload</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Edit Agent Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Status</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Update Agent ID</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent E-KYC</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">BBPS Biller Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">E-KYC Registration</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Device E-KYC Registration</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const transactionReportPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Transaction Log File</span>
+            </Link>
+          </li>
+          <li className={activeLink("/transaction-report/all-transaction")}>
+            <Link to="/transaction-report/all-transaction">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">All Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Decline Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Reversal Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Current Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">DMT Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">BBPS Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">AEPS Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">MATM Transaction</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">
+                Transaction Settlement Tracker
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">ZOM Details Report</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+  const franchiseManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Registration</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Deactive Franchise</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Document Upload</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Acive Franchise</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Edit Franchise Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Verification</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Decline Franchise</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Terminate Franchise</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Onboared Franchise</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Franchise Status</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+  const clientManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Registration</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Document Upload</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Verification</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Active Client</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Decline Clients </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Deactivated Clients</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Terminated Clients</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Edit Client Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Onboared Franchise</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Status</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+  const walletManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Direct Credit/Debit Wallet</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Request Money</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Wallet Approval Maker</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">My Wallet</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Balance Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Bank Transfer Approval</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Wallet Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">E-Collect Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Maximus Wallet Top-Up</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Client Wallet Ledger</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Franchise Wallet Ledger</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Agent Wallet Ledger</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Maximus Wallet Ledger</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Wallet To Wallet Ledger</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">
+                Wallet To Bank Transfer Report
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Current Balance Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">
+                Bulk Wallet To Wallet Transfer
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">MATM Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Wallet Approval Cheker</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">
+                Wallet Bank Transfer Settlement
+              </span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const limitManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Transaction Limit Master</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Transaction Limit Requests</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Transaction Limit Tracker</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Bank Transfer Limit Master</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Bank Transfer Limit Request</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Bank Transfer Limit Tracker</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const complaintManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Other Complaints</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">BBPS Complaints</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const settlementManagementPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">Transaction Settlement</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">
+                Transaction Settlement Tracker
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">MATM Approval</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">MATM Tracker</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">MATM Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">WBT Settlement Request</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-vertical-line"></span>
+              </span>
+              <span className="subMenuRight">WBT Settlement Approval</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
 
   return (
     <div className="sidebarSmall">
@@ -1290,7 +1316,7 @@ const SidebarSmall = (props) => {
           overlay={agentManagementPopover}
           rootClose
         >
-          <div className={activeLink("/")}>
+          <div className={activeLink("/agent-management")}>
             <span className="sidebarIconSize icon-agent-management">
               {/* Agent Management Small Icon */}
             </span>
@@ -1306,7 +1332,7 @@ const SidebarSmall = (props) => {
           overlay={transactionReportPopover}
           rootClose
         >
-          <div className={activeLink("/all-transaction")}>
+          <div className={activeLink("/transaction-report")}>
             <span className="sidebarIconSize icon-Transaction-report">
               {/* Transaction Report Icon */}
             </span>

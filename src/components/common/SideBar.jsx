@@ -1,8 +1,20 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, matchPath } from "react-router-dom";
 
 const SideBar = (props) => {
   const path = useLocation().pathname;
+
+  // agent management Path
+  let agentManagementPath = matchPath("/agent-management/*", path);
+  if (agentManagementPath) {
+    agentManagementPath = agentManagementPath.pathnameBase;
+  }
+
+  // Transaction Report Path
+  let transactionReportPath = matchPath("/transaction-report/*", path);
+  if (transactionReportPath) {
+    transactionReportPath = transactionReportPath.pathnameBase;
+  }
 
   const activeLink = (arr) => {
     if (arr === path) {
@@ -15,6 +27,12 @@ const SideBar = (props) => {
   const activeBtnClass = (arr) => {
     if (arr === path) {
       return "accordion-button";
+    }
+    if (arr === agentManagementPath) {
+      return "accordion-button";
+    }
+    if (arr === transactionReportPath) {
+      return "accordion-button";
     } else {
       return "accordion-button collapsed";
     }
@@ -22,12 +40,24 @@ const SideBar = (props) => {
   const activeAriaExpand = (arr = []) => {
     if (arr === path) {
       return "true";
+    }
+    if (arr === agentManagementPath) {
+      return "true";
+    }
+    if (arr === transactionReportPath) {
+      return "true";
     } else {
       return "false";
     }
   };
   const activeAccordionBodyClass = (arr) => {
     if (arr === path) {
+      return "accordion-collapse collapse show";
+    }
+    if (arr === agentManagementPath) {
+      return "accordion-collapse collapse show";
+    }
+    if (arr === transactionReportPath) {
       return "accordion-collapse collapse show";
     } else {
       return "accordion-collapse collapse ";
@@ -667,11 +697,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingAgentManagement">
             <button
-              className={activeBtnClass("/")}
+              className={activeBtnClass("/agent-management")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseAgentManagement"
-              aria-expanded={activeAriaExpand("/")}
+              aria-expanded={activeAriaExpand("/agent-management")}
               aria-controls="collapseAgentManagement"
             >
               <span className="sidebarIconSize icon-agent-management">
@@ -682,7 +712,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseAgentManagement"
-            className={activeAccordionBodyClass("/")}
+            className={activeAccordionBodyClass("/agent-management")}
             aria-labelledby="headingAdminManagement"
             data-bs-parent="#accordionExample"
           >
@@ -721,7 +751,12 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" className={activeLink("/")}>
+                  <Link
+                    to="/agent-management/manual-kyc-registration"
+                    className={activeLink(
+                      "/agent-management/manual-kyc-registration"
+                    )}
+                  >
                     <span className="subMenuLeft">
                       <span className="icon-vertical-line"></span>
                     </span>
@@ -821,11 +856,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingTransactionReport">
             <button
-              className={activeBtnClass("/all-transaction")}
+              className={activeBtnClass("/transaction-report")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTransactionReport"
-              aria-expanded={activeAriaExpand("/all-transaction")}
+              aria-expanded={activeAriaExpand("/transaction-report")}
               aria-controls="collapseTransactionReport"
             >
               <span className="sidebarIconSize icon-Transaction-report">
@@ -836,7 +871,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseTransactionReport"
-            className={activeAccordionBodyClass("/all-transaction")}
+            className={activeAccordionBodyClass("/transaction-report")}
             aria-labelledby="headingTransactionReport"
             data-bs-parent="#accordionExample"
           >
@@ -852,8 +887,10 @@ const SideBar = (props) => {
                 </li>
                 <li>
                   <Link
-                    to="/all-transaction"
-                    className={activeLink("/all-transaction")}
+                    to="/transaction-report/all-transaction"
+                    className={activeLink(
+                      "/transaction-report/all-transaction"
+                    )}
                   >
                     <span className="subMenuLeft">
                       <span className="icon-vertical-line"></span>
