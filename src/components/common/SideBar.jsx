@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, useLocation, matchPath } from "react-router-dom";
+import { Link, useLocation, matchPath, useNavigate } from "react-router-dom";
 
 const SideBar = (props) => {
   const path = useLocation().pathname;
+  let navigate = useNavigate();
 
   // agent management Path
   let agentManagementPath = matchPath("/agent-management/*", path);
@@ -14,6 +15,11 @@ const SideBar = (props) => {
   let transactionReportPath = matchPath("/transaction-report/*", path);
   if (transactionReportPath) {
     transactionReportPath = transactionReportPath.pathnameBase;
+  }
+
+  // redirects
+  if (path === "/") {
+    navigate("/agent-management/manual-kyc-registration");
   }
 
   const activeLink = (arr) => {
