@@ -271,6 +271,16 @@
         margin-top: 12px;
     }
 }
+@media(max-width:520px) {
+
+
+    .summaryRow .summaryTableBox.summaryTableBox2 {
+        width: 100%;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+}
 
 
 @media(max-width:425px) {
@@ -279,8 +289,9 @@
         }
         
     .summaryRow .summaryTableBox.summaryTableBox2 {
-        width: 327px;
-        margin-left: 0px;
+        width: 100%;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
     }
 
     .identificationContainer .accordion-body .configSelectBoxTop .col-Criteria {
