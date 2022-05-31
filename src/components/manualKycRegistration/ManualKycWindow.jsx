@@ -175,7 +175,7 @@ const ManualKycWindow = () => {
           <Link to="/">
             <svg
               width="8"
-              height="auto"
+              height="100%"
               viewBox="0 0 10 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@ const ManualKycWindow = () => {
           <span>
             <svg
               width="8"
-              height="auto"
+              height="100%"
               viewBox="0 0 10 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

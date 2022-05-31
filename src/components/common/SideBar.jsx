@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation, matchPath, useNavigate } from "react-router-dom";
 
 const SideBar = (props) => {
@@ -18,9 +18,11 @@ const SideBar = (props) => {
   }
 
   // redirects
-  if (path === "/") {
-    navigate("/agent-management/manual-kyc-registration");
-  }
+  useEffect(() => {
+    if (path === "/") {
+      navigate("/agent-management/manual-kyc-registration");
+    }
+  });
 
   const activeLink = (arr) => {
     if (arr === path) {
